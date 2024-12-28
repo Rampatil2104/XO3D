@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateZ(0); 
+  }
+  50% { 
+    transform: translateZ(20px); 
+  }
+}
+
+.animate-float {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes fade-in {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
